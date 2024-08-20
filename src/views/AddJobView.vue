@@ -2,6 +2,7 @@
 import { reactive } from "vue";
 import axios from "axios";
 import router from "@/router";
+import { useToast } from "vue-toastification";
 
 const form = reactive({
   type: "Full-Time",
@@ -16,6 +17,8 @@ const form = reactive({
     contactPhone: "",
   },
 });
+
+const toast = useToast();
 
 const handleSubmit = async () => {
   const newJob = {
@@ -35,10 +38,10 @@ const handleSubmit = async () => {
   try {
     // api is proxied to http://localhost:5000 in vite.config.js
     const response = await axios.post(`/api/jobs`, newJob);
-    // TODO: show toast
+    toast.success("Job added successfully!");
     router.push(`/jobs/${response.data.id}`);
   } catch (error) {
-    // TODO: show toast
+    toast.error("Error adding job:");
     console.error("Error adding job:", error);
   } finally {
     setTimeout(() => {
