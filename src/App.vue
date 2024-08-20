@@ -2,13 +2,12 @@
 import Navbar from "./components/Navbar.vue";
 import Hero from "./components/Hero.vue";
 import HomeCards from "./components/HomeCards.vue";
+import JobListings from "./components/JobListings.vue";
 </script>
 
 <template>
   <Navbar />
-  <Hero
-    title="Become an Angular Dev"
-    subtitle="Find the Angular job that fits your skills and needs"
-  />
+  <Hero />
   <HomeCards />
+  <JobListings />
 </template>
