@@ -1,3 +1,7 @@
+# Vue 3 + vite course by Brad Traversy
+
+[View the free YouTube Course here!](https://www.youtube.com/watch?v=VeNfHj6MhgA)
+
 # vue-crash-2024
 
 This template should help get you started developing with Vue 3 in Vite.
