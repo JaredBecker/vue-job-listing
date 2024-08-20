@@ -21,7 +21,8 @@ const state = reactive({
 
 onMounted(async () => {
   try {
-    const response = await axios.get("http://localhost:5000/jobs");
+    // api is proxied to http://localhost:5000 in vite.config.js
+    const response = await axios.get("/api/jobs");
     state.jobs = response.data;
   } catch (error) {
     console.error("Error fetching jobs:", error);
